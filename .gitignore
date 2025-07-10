@@ -1,5 +1,7 @@
 .venv
 .pytest_cache
+# Code Coverage
+.coverage
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 

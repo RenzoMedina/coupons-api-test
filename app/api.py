@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from app.coupons import applyCoupon
+from app.coupons import getFinalPrice
 
 app = Flask(__name__)
 
@@ -10,5 +10,5 @@ def get_price():
     coupon = data.get('coupon')
     tax_rate = data.get('tax_rate',0.19)
 
-    final = applyCoupon(price, coupon, tax_rate)
+    final = getFinalPrice(price, coupon, tax_rate)
     return jsonify({"price_final":final})
